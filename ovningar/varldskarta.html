@@ -1,0 +1,542 @@
+
+<!DOCTYPE html>
+
+<html lang="fi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Att presentera data på en karta &#8212; Geografi</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://opendata-education.github.io/se_Geografi/intro.html/ovningar/varldskarta.html" />
+    <link rel="shortcut icon" href="../_static/logo.png"/>
+    <link rel="index" title="Sisällysluettelo" href="../genindex.html" />
+    <link rel="search" title="Etsi" href="../search.html" />
+    <link rel="next" title="Interaktiva kartor" href="interaktiv_karta.html" />
+    <link rel="prev" title="Intro 2: Statistik i Python" href="intro_2_statistik_i_python.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Geografi</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Hae tästä kirjasta ..." aria-label="Hae tästä kirjasta ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Tervetuloa avoimen datan pariin
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Ovningar
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro_1_jupyter_python.html">
+   Intro 1: Använd Jupyter Notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro_2_statistik_i_python.html">
+   Intro 2: Statistik i Python
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Att presentera data på en karta
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="interaktiv_karta.html">
+   Interaktiva kartor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="openstreetmap.html">
+   Open Street Map - Skapa vägkartor 1
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Vaihda navigointia" aria-controls="site-navigation"
+                title="Vaihda navigointia" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Lataa tämä sivu"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/ovningar/varldskarta.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Lataa lähdetiedosto" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Tulosta PDF-tiedostoon"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/opendata-education/se_Geografi"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Lähteen arkisto"><i
+                    class="fab fa-github"></i>arkisto</button></a>
+        <a class="issues-button"
+            href="https://github.com/opendata-education/se_Geografi/issues/new?title=Issue%20on%20page%20%2Fovningar/varldskarta.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Avaa ongelma"><i class="fas fa-lightbulb"></i>avoin ongelma</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Koko näytön tila"
+        title="Koko näytön tila"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/opendata-education/se_Geografi/main?urlpath=tree/material/ovningar/varldskarta.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Tuoda markkinoille Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Sisällys
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#soka-och-hamta-data">
+   Söka och hämta data
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instruktioner-for-installation-galler-ej-online">
+     Instruktioner för installation (gäller ej online)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualisera-data">
+   Visualisera data
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="att-presentera-data-pa-en-karta">
+<h1>Att presentera data på en karta<a class="headerlink" href="#att-presentera-data-pa-en-karta" title="Permalink to this headline">¶</a></h1>
+<p>I denna övning ska vi lära oss presentera nationsspecifika data på världskartan, och som datagrund använder vi information om nationernas koldioxidutsläpp från <a class="reference external" href="https://databank.worldbank.org/home">Worldbank</a>. Datan kan presenteras på många olika sätt. Ett sätt är att hålla alla värden i en tabell. Ur tabellen kan man då förstås söka upp utsläppsvärden från valfritt land, men för att riktigt få en helhetsbild av situationen vore det smart att presentera datan grafiskt på en världskarta.</p>
+<p>Vi ska rita en världskarta och färga de länder mörkare, där utsläppen är större.</p>
+<div class="section" id="soka-och-hamta-data">
+<h2>Söka och hämta data<a class="headerlink" href="#soka-och-hamta-data" title="Permalink to this headline">¶</a></h2>
+<p>Vi börjar med att söka de data vi behöver. I denna övning använder vi en datafil som redan finns sparad med namnet ’CO2-emissions-per-capita-2014.csv’ i mappen ’data’. Informationen om koldioxidutsläppen kommer från adressen <a class="reference external" href="https://databank.worldbank.org/source/world-development-indicators">https://databank.worldbank.org/source/world-development-indicators#</a>.</p>
+<p>För att få in informationen på världskartan behöver vi nationsgränserna i vektorform, i en .shp-fil. som tur är finns denna information redan i funktionspaketet <a class="reference external" href="https://geopandas.org/">GeoPandas</a>. Om man vill kan man också ladda ned gränserna i hög kvalitet från <a class="reference external" href="https://www.naturalearthdata.com/downloads/">https://www.naturalearthdata.com/downloads/</a>. På webben kan vi också hitta andra .shp-filer med t.ex. finlands kommungränser.</p>
+<p>För att läsa och tolka data använder vi vanligen funktionspaketet <a class="reference external" href="https://pandas.pydata.org/">Pandas</a>. Nu behöver vi också GeoPandas för att få in geografisk information. <a class="reference external" href="https://matplotlib.org/">Matplotlib</a> behövs för att skapa diagram. Vi börjar med att läsa in funktionspaketen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>             <span class="c1"># Med pandas-paketet kan vi läsa och hantera data.</span>
+<span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>         <span class="c1"># geopandas är som pandas, men innehåller också geometriska data.</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> <span class="c1"># matplotlib hjälper oss visualisera data.</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">5</span><span class="n">c7f113020bb</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>             <span class="c1"># Med pandas-paketet kan vi läsa och hantera data.</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>         <span class="c1"># geopandas är som pandas, men innehåller också geometriska data.</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> <span class="c1"># matplotlib hjälper oss visualisera data.</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;geopandas&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="instruktioner-for-installation-galler-ej-online">
+<h3>Instruktioner för installation (gäller ej online)<a class="headerlink" href="#instruktioner-for-installation-galler-ej-online" title="Permalink to this headline">¶</a></h3>
+<p>Geopandas innehåller geometriska data som behövs för att rita kartdiagram. Modulen geopandas finns inte automatiskt i anaconda-paketet, och om du gör denna övning lokalt på din dator behöver du installera den. Detta gör du genom att öppna kommandotolken <em>anaconda prompt</em>, skriva <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">geopandas</span></code>, och trycka Enter. Anaconda meddelar vilka paket som bör installeras och uppdateras, och frågar <code class="docutils literal notranslate"><span class="pre">proceed</span> <span class="pre">[y/n]?</span></code>. Skriv <code class="docutils literal notranslate"><span class="pre">y</span></code> och tryck Enter. Nu finns geopandas på din dator, och kan importeras med hjälp av cellen ovan.</p>
+<p>Andra problem som kan uppstå:</p>
+<ul class="simple">
+<li><p>Anaconda lyckas inte installera geopandas? Detta löses genom att uppdatera anaconda. Skriv <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">update</span> <span class="pre">--all</span></code> i anaconda prompt.</p></li>
+<li><p>Senare kodceller i detta dokument kan avge felmeddelanden för att geopandas behöver andra paket för att fungera. Dessa kan installeras på samma sett med kommandon <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">descartes</span></code> och <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">mapclassify</span></code>. Bägge installationerna ska bekräftas med <code class="docutils literal notranslate"><span class="pre">y</span></code> när Anaconda frågar <code class="docutils literal notranslate"><span class="pre">proceed</span> <span class="pre">[y/n]?</span></code>.</p></li>
+</ul>
+<p>Vi läser in datan och ser vad den innehåller.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Vi läser in nationsgränserna och sparar dem med variabelnamnet world.</span>
+<span class="n">world</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">gpd</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">get_path</span><span class="p">(</span><span class="s1">&#39;naturalearth_lowres&#39;</span><span class="p">))</span>
+
+<span class="c1"># Vi skriver ut de första raderna </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">world</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="n">b86d5c18ab87</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Vi läser in nationsgränserna och sparar dem med variabelnamnet world.</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">world</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">gpd</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">get_path</span><span class="p">(</span><span class="s1">&#39;naturalearth_lowres&#39;</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> 
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># Vi skriver ut de första raderna</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="nb">print</span><span class="p">(</span><span class="n">world</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+
+<span class="ne">NameError</span>: name &#39;gpd&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>Vi kan se att tabellen har flera kolumner, varav de viktigaste här är ”name”, som anger nationens namn, och ”geometry”, som anger information om gränserna.</p>
+<p>Vi kan, med hjälp av geopandas, rita ut datan med plot-kommandot.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">world</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="mi">3</span><span class="n">eb6fdbdd495</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">world</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+
+<span class="ne">NameError</span>: name &#39;world&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>Resultatet är alldeles tydligt en världskarta. Nu behöver vi också färga länderna enligt deras koldioxidutsläpp.</p>
+<p>Vi läser in utsläppsdatan och ser vad den innehåller.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Vi läser in CO2-utsläppsdatan och sparar den som CO2_2014.</span>
+
+<span class="n">CO2_2014</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../data/CO2-emissions-per-capita-2014.csv&#39;</span><span class="p">)</span>
+
+<span class="c1"># Vi skriver ut de första raderna av datan</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">CO2_2014</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     Country Name Country Code                             Series Name  \
+0     Afghanistan          AFG  CO2 emissions (metric tons per capita)   
+1         Albania          ALB  CO2 emissions (metric tons per capita)   
+2         Algeria          DZA  CO2 emissions (metric tons per capita)   
+3  American Samoa          ASM  CO2 emissions (metric tons per capita)   
+4         Andorra          AND  CO2 emissions (metric tons per capita)   
+
+      Series Code      2014 [YR2014]  
+0  EN.ATM.CO2E.PC  0.253727945460333  
+1  EN.ATM.CO2E.PC   1.90006971019389  
+2  EN.ATM.CO2E.PC   3.73580277736793  
+3  EN.ATM.CO2E.PC                 ..  
+4  EN.ATM.CO2E.PC   5.83290621488897  
+</pre></div>
+</div>
+</div>
+</div>
+<p>Vi märker att koldioxidutsläppens data finns i kolumnen ”2014 [YR2014]”, i enheten <em>ton per person (per år)</em>. Vi ser också att kolumnen med ländernas namn eller landskod har olika namn i de båda tabellerna. Detta måste beaktas när tabellerna ska kombineras. När vi vill rita in nationsspecifika data på kartan behöver vi förena tabellerna så att landets geometriska information finns på samma rad som utsläppsdatan. Detta kan göas med merge-funktionen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Tabellen saknar värden för vissa länder. Dessa är märkta med &quot;..&quot;, och vi behöver ta bort dem ur tabellen.</span>
+<span class="c1"># Vi ser sedan till att utsläppen är angivna som siffror (float), och inte som text (string).</span>
+
+
+<span class="n">CO2_2014</span> <span class="o">=</span> <span class="n">CO2_2014</span><span class="p">[</span><span class="n">CO2_2014</span><span class="p">[</span><span class="s2">&quot;2014 [YR2014]&quot;</span><span class="p">]</span><span class="o">!=</span><span class="s1">&#39;..&#39;</span><span class="p">]</span> <span class="c1"># != betyder &quot;ej lika med&quot;. Vi väljer ut de rader som inte inehåller &quot;..&quot;</span>
+<span class="n">CO2_2014</span><span class="p">[</span><span class="s1">&#39;2014 [YR2014]&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">CO2_2014</span><span class="p">[</span><span class="s1">&#39;2014 [YR2014]&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float64&#39;</span><span class="p">)</span>
+
+
+<span class="c1"># Vi kombinerar &#39;world&#39;-datan och &#39;CO2_2014&#39;-datan med name/Country name-kolumnerna som referens.</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">world</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">CO2_2014</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="n">right_on</span><span class="o">=</span><span class="s1">&#39;Country Name&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="mf">24e8</span><span class="n">d0fa5169</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> 
+<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="c1"># Vi kombinerar &#39;world&#39;-datan och &#39;CO2_2014&#39;-datan med name/Country name-kolumnerna som referens.</span>
+<span class="ne">---&gt; </span><span class="mi">12</span> <span class="n">data</span> <span class="o">=</span> <span class="n">world</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">CO2_2014</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="n">right_on</span><span class="o">=</span><span class="s1">&#39;Country Name&#39;</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;world&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="visualisera-data">
+<h2>Visualisera data<a class="headerlink" href="#visualisera-data" title="Permalink to this headline">¶</a></h2>
+<p>Nu när vi har förenat tabellerna, kan vi använda dem för att rita ett diagram med plot-funktionen. Som parametrar i plot-funktionen använder vi kolumnen med kvantiteten (koldioxidutsläpp) som avgör hur vi färglägger länderna, bildstorlek och färgskala (’Greens’).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s1">&#39;2014 [YR2014]&#39;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="mi">20</span><span class="p">),</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Greens&#39;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span> <span class="c1"># 6 olika nyanser</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">6</span><span class="o">-</span><span class="n">d12b29ae58fb</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">data</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s1">&#39;2014 [YR2014]&#39;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="mi">20</span><span class="p">),</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Greens&#39;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span> <span class="c1"># 6 olika nyanser</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="ne">NameError</span>: name &#39;data&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>Kartan visar oss en jämförelse mellan olika länders utsläpp, men indelningen är inte så tydlig. Detta beror på att klasserna automatiskt delas in så att varje klass är lika stor inom undersökningsintervallet 0,04-43,52 ton/capita. Fördelningen av länder mellan klasserna är inte alls jämn. Vi kan istället dela in länderna i lika stora grupper, så kallade <em>kvantiler</em>, så att vi till exempel har en sjättedel av länderna i varje klass. Vi lägger också till ett kommando som markerar de övriga länderna med grå streck, så att vi ser var informationen saknas också.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Vi väljer bildstorlek och bakgrundsfärg: ljusblå</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="mi">20</span><span class="p">),</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;lightblue&#39;</span><span class="p">)</span>
+
+<span class="c1"># Vi ritar in alla länder och streckar dem.</span>
+<span class="c1"># De som saknar information kommer att förbli gråstreckade efter att vi har fyllt i resten.</span>
+<span class="n">world</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;darkgrey&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">hatch</span><span class="o">=</span> <span class="s2">&quot;///&quot;</span><span class="p">)</span>
+
+<span class="c1"># Vi ritar kartdiagrammet på kartan.</span>
+<span class="n">data</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">column</span><span class="o">=</span><span class="s1">&#39;2014 [YR2014]&#39;</span><span class="p">,</span> <span class="c1"># Vi väljer informationskolumn (koldioxidutsläpp)</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>                  <span class="c1"># Vi ritar bilden på samma axel som bakgrunden</span>
+    <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Greens&#39;</span><span class="p">,</span>          <span class="c1"># Vi använder toner av grön för färgkartan.</span>
+    <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>            <span class="c1"># Vi lägger till en förklaringsruta</span>
+    <span class="n">legend_kwds</span><span class="o">=</span><span class="p">{</span>           <span class="c1">#</span>
+        <span class="s1">&#39;fontsize&#39;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span>     <span class="c1"># Fontstorlek på förklaringen</span>
+        <span class="s1">&#39;loc&#39;</span><span class="p">:</span><span class="s1">&#39;center left&#39;</span> <span class="c1"># Förklaringens placering</span>
+    <span class="p">},</span>                      <span class="c1">#</span>
+    <span class="n">scheme</span><span class="o">=</span><span class="s1">&#39;quantiles&#39;</span><span class="p">,</span>     <span class="c1"># Vi delar in länderna i kvantiler</span>
+    <span class="n">k</span><span class="o">=</span><span class="mi">6</span>                     <span class="c1"># Vi väljer antalet kvantiler: 6</span>
+<span class="p">)</span>
+
+<span class="c1"># Vi lägger till en rubrik</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Koldioxidutsläpp per capita (ton per år)&#39;</span><span class="p">,</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">40</span><span class="p">)</span>
+
+<span class="c1"># Vi tar bort axlarna för att snygga till det</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+
+<span class="c1"># Och slutligen visar vi bilden.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">7</span><span class="o">-</span><span class="mi">5849</span><span class="n">af492464</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Vi väljer bildstorlek och bakgrundsfärg: ljusblå</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="mi">20</span><span class="p">),</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;lightblue&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> 
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># Vi ritar in alla länder och streckar dem.</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># De som saknar information kommer att förbli gråstreckade efter att vi har fyllt i resten.</span>
+
+<span class="ne">NameError</span>: name &#39;plt&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nu kan vi lättare urskilja de olika områdena och deras nivåer av koldioxidutsläpp. Du kan också pröva dela in datan i fler eller färre än 6 delar. Hur tycker du att kartan blir tydligast?</p>
+<p>Nu är det dags att söka upp någon egen datafil som verkar intressant, och visualisera den på samma sätt. Du kan hitta sådana filer genom att googla, eller från adresserna <a class="reference external" href="https://databank.worldbank.org/source/world-development-indicators">https://databank.worldbank.org/</a> och <a class="reference external" href="https://ourworldindata.org/">https://ourworldindata.org/</a>. Dessa hemsidor visar informationen på kartor direkt, men försök skapa dem själv också.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./ovningar"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="intro_2_statistik_i_python.html" title="previous page">Intro 2: Statistik i Python</a>
+    <a class='right-next' id="next-link" href="interaktiv_karta.html" title="next page">Interaktiva kartor</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          Tekijä HIP Education and Open Data Team<br/>
+        
+          <div class="extra_footer">
+            <div>
+<a>Toteutettu Opetushallituksen valtionavustuksella tiedekasvatuksen edistämiseen.</a></br><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="license" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a> Tämän sivuston materiaali on käytettävissä seuraavalla lisenssillä: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY 4.0.</a>
+</div>    
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

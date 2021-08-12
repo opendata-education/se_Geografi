@@ -1,6 +1,6 @@
-# materiaali
+# Geografi
 
-Avoimeen dataan perustuvaa opetusaineistoa maantieteen aiheista
+Övningar i datahantering med grund i Geografi.
 
 ## Usage
 

@@ -1,0 +1,11 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+- file: intro
+- part: Ovningar
+  chapters:
+  - file: ovningar/intro_1_jupyter_python
+  - file: ovningar/intro_2_statistik_i_python
+  - file: ovningar/varldskarta
+  - file: ovningar/interaktiv_karta
+  - file: ovningar/koleraepidemin_1854
+  - file: ovningar/openstreetmap

@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -37,15 +37,12 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -90,7 +87,7 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../intro.html">
-   Tervetuloa avoimen datan pariin
+   Välkommen att använda Open Data
   </a>
  </li>
 </ul>
@@ -246,17 +243,6 @@ När du har installerat funktionspaketet kan du köra cellen nedan.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">81</span><span class="n">aadd167384</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">osmnx</span> <span class="k">as</span> <span class="nn">ox</span>  <span class="c1"># osmnx låter oss hämta kartdata</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>  <span class="c1"># matplotlib låter oss rita diagram, och i detta fall, kartor.</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;osmnx&#39;
-</pre></div>
-</div>
-</div>
 </div>
 <p>Vi bestämmer en adress som vi vill utgå ifrån. Vi bestämmer också ett avstånd.</p>
 <p>Vi undersöker vägnätet inom en halv kilometer från Vasa torg.</p>
@@ -282,16 +268,8 @@ När du har installerat funktionspaketet kan du köra cellen nedan.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="mi">9</span><span class="n">fdbec80eaff</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Vi hämtar in vägdata genom att ange adress och avstånd.</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">graph</span> <span class="o">=</span> <span class="n">ox</span><span class="o">.</span><span class="n">graph_from_address</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="n">distance</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> 
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># Vi ritar ut vägnätet</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">ox</span><span class="o">.</span><span class="n">plot_graph</span><span class="p">(</span><span class="n">graph</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;ox&#39; is not defined
+<img alt="../_images/openstreetmap_5_0.png" src="../_images/openstreetmap_5_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&lt;Figure size 576x576 with 1 Axes&gt;, &lt;AxesSubplot:&gt;)
 </pre></div>
 </div>
 </div>
@@ -320,16 +298,19 @@ Eller kanske Vasa är obekant och ointressant för dig? Du kan när som helst g�
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="n">da882374ee8f</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Från den tidigare bilden skiljer vi ut korsningar (nodes) och gator (edges)</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">nodes</span><span class="p">,</span> <span class="n">edges</span> <span class="o">=</span> <span class="n">ox</span><span class="o">.</span><span class="n">graph_to_gdfs</span><span class="p">(</span><span class="n">graph</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> 
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># Vi söker fram byggnaderna i området genom att igen ange adress och avstånd, samt parametern tags = &quot;building&quot;: True</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">buildings</span> <span class="o">=</span> <span class="n">ox</span><span class="o">.</span><span class="n">geometries_from_address</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="n">distance</span><span class="p">,</span> <span class="n">tags</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;building&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}</span> <span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;ox&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;geometry&#39;, &#39;amenity&#39;, &#39;source&#39;, &#39;fee&#39;, &#39;name&#39;, &#39;operator&#39;, &#39;parking&#39;,
+       &#39;wheelchair&#39;, &#39;service:bicycle:repair&#39;, &#39;service:bicycle:retail&#39;,
+       &#39;shop&#39;, &#39;office&#39;, &#39;cuisine&#39;, &#39;opening_hours&#39;, &#39;outdoor_seating&#39;,
+       &#39;smoking&#39;, &#39;website&#39;, &#39;nodes&#39;, &#39;addr:city&#39;, &#39;addr:postcode&#39;,
+       &#39;addr:street&#39;, &#39;building&#39;, &#39;building:colour&#39;, &#39;building:levels&#39;,
+       &#39;name:en&#39;, &#39;name:fi&#39;, &#39;name:sv&#39;, &#39;addr:housenumber&#39;, &#39;alt_name&#39;,
+       &#39;public_transport&#39;, &#39;roof:shape&#39;, &#39;description&#39;, &#39;height&#39;, &#39;man_made&#39;,
+       &#39;tourism&#39;, &#39;layer&#39;, &#39;note&#39;, &#39;email&#39;, &#39;internet_access&#39;, &#39;phone&#39;,
+       &#39;addr:housename&#39;, &#39;roof:colour&#39;, &#39;alt_name:fi&#39;, &#39;alt_name:sv&#39;,
+       &#39;service:bicycle:rental&#39;, &#39;service:bicycle:second_hand&#39;, &#39;denomination&#39;,
+       &#39;religion&#39;, &#39;is_in&#39;, &#39;start_date&#39;, &#39;building:material&#39;, &#39;building:part&#39;,
+       &#39;ways&#39;, &#39;type&#39;],
+      dtype=&#39;object&#39;)
 </pre></div>
 </div>
 </div>
@@ -365,18 +346,7 @@ Eller kanske Vasa är obekant och ointressant för dig? Du kan när som helst g�
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="mi">62</span><span class="n">dd1eca40dd</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Vi grundar diagrammet med ett subplots-kommando</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span><span class="mi">16</span><span class="p">))</span> <span class="c1"># Här kan man justera bildstorleken.</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> 
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># Vi väljer en neutral bakgrundsfärg</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_facecolor</span><span class="p">(</span><span class="s1">&#39;seashell&#39;</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;plt&#39; is not defined
-</pre></div>
-</div>
+<img alt="../_images/openstreetmap_9_0.png" src="../_images/openstreetmap_9_0.png" />
 </div>
 </div>
 <p>Nu har vi redan ritat vägnät och byggnader. Vi kan lägga till parker i bilden. I tabellen är de märkta med taggen ”leisure”. På den taggen hittar vi mycket annat också, så vi måste rensa informationen lite.</p>
@@ -391,16 +361,16 @@ Eller kanske Vasa är obekant och ointressant för dig? Du kan när som helst g�
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">6</span><span class="o">-</span><span class="n">a4c8776218b1</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Vi söker fram alla fritidsmärkta områden med taggen &quot;leisure&quot;: True. Vi använder samma adress och avstånd.</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">leisure</span> <span class="o">=</span> <span class="n">ox</span><span class="o">.</span><span class="n">geometries_from_address</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="n">distance</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;leisure&quot;</span><span class="p">:</span><span class="kc">True</span><span class="p">})</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> 
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># Variabeln &quot;leisure&quot;, som vi skapat, är en tabell. Vi kontrollerar vilka kolumner den innehåller.</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">leisure</span><span class="o">.</span><span class="n">columns</span>
-
-<span class="ne">NameError</span>: name &#39;ox&#39; is not defined
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/geopandas/_vectorized.py:142: DeprecationWarning: An exception was ignored while fetching the attribute `__array_interface__` from an object of type &#39;Polygon&#39;.  With the exception of `AttributeError` NumPy will always raise this exception in the future.  Raise this deprecation warning to see the original exception. (Warning added NumPy 1.21)
+  aout[:] = out
+/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/geopandas/_vectorized.py:142: DeprecationWarning: An exception was ignored while fetching the attribute `__array_interface__` from an object of type &#39;MultiPolygon&#39;.  With the exception of `AttributeError` NumPy will always raise this exception in the future.  Raise this deprecation warning to see the original exception. (Warning added NumPy 1.21)
+  aout[:] = out
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;geometry&#39;, &#39;brand&#39;, &#39;brand:wikidata&#39;, &#39;brand:wikipedia&#39;, &#39;entrance&#39;,
+       &#39;leisure&#39;, &#39;name&#39;, &#39;opening_hours:covid19&#39;, &#39;sport&#39;, &#39;source&#39;, &#39;nodes&#39;,
+       &#39;name:sv&#39;, &#39;surface&#39;, &#39;lit&#39;, &#39;ways&#39;, &#39;type&#39;],
+      dtype=&#39;object&#39;)
 </pre></div>
 </div>
 </div>
@@ -413,12 +383,7 @@ Eller kanske Vasa är obekant och ointressant för dig? Du kan när som helst g�
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">7</span><span class="o">-</span><span class="mi">8</span><span class="n">d19e3a1a716</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="n">leisure</span><span class="p">[</span><span class="s1">&#39;leisure&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
-
-<span class="ne">NameError</span>: name &#39;leisure&#39; is not defined
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;fitness_centre&#39; &#39;playground&#39; &#39;park&#39; &#39;pitch&#39; &#39;marina&#39;]
 </pre></div>
 </div>
 </div>
@@ -428,17 +393,6 @@ Eller kanske Vasa är obekant och ointressant för dig? Du kan när som helst g�
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Vi väljer ut parkerna bland fritidsplatserna. Funktionen .isin([&quot;park&quot;]) söker upp de rader som innehåller ordet park.</span>
 <span class="n">parks</span> <span class="o">=</span> <span class="n">leisure</span><span class="p">[</span><span class="n">leisure</span><span class="p">[</span><span class="s2">&quot;leisure&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s2">&quot;park&quot;</span><span class="p">])]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">8</span><span class="o">-</span><span class="n">eac77078c676</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Vi väljer ut parkerna bland fritidsplatserna. Funktionen .isin([&quot;park&quot;]) söker upp de rader som innehåller ordet park.</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">parks</span> <span class="o">=</span> <span class="n">leisure</span><span class="p">[</span><span class="n">leisure</span><span class="p">[</span><span class="s2">&quot;leisure&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s2">&quot;park&quot;</span><span class="p">])]</span>
-
-<span class="ne">NameError</span>: name &#39;leisure&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -464,18 +418,7 @@ Eller kanske Vasa är obekant och ointressant för dig? Du kan när som helst g�
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">9</span><span class="o">-</span><span class="n">c5373f5d50dc</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span><span class="mi">16</span><span class="p">))</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> 
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_facecolor</span><span class="p">(</span><span class="s1">&#39;seashell&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Gator, byggnader och parker inom 500m från Vasa torg&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">24</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> 
-
-<span class="ne">NameError</span>: name &#39;plt&#39; is not defined
-</pre></div>
-</div>
+<img alt="../_images/openstreetmap_17_0.png" src="../_images/openstreetmap_17_0.png" />
 </div>
 </div>
 <p>Vi märker att grönområderna går lite utanför den avståndsbegränsning som vi valde i början, och det har gjort kartan lite mindre. Vi kan välja gränser för diagrammet, så att skalan blir samma som tidigare. Vi kan använda <a class="reference external" href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.xlim.html?highlight=xlim#matplotlib.pyplot.xlim"><code class="docutils literal notranslate"><span class="pre">plt.xlim()</span></code></a> och <a class="reference external" href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.ylim.html?highlight=ylim#matplotlib.pyplot.ylim"><code class="docutils literal notranslate"><span class="pre">plt.ylim()</span></code></a> för att begränsa kartan. Vi kan se vilka gränser som passar genom att läsa av värdena på kartornas axlar.</p>
@@ -500,18 +443,7 @@ Eller kanske Vasa är obekant och ointressant för dig? Du kan när som helst g�
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="n">a37381d12298</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span><span class="mi">16</span><span class="p">))</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> 
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_facecolor</span><span class="p">(</span><span class="s1">&#39;seashell&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Gator, byggnader och parker inom 500m från Vasa torg&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">24</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> 
-
-<span class="ne">NameError</span>: name &#39;plt&#39; is not defined
-</pre></div>
-</div>
+<img alt="../_images/openstreetmap_19_0.png" src="../_images/openstreetmap_19_0.png" />
 </div>
 </div>
 <p>Nu är kartan klar. Med den kan vi undersöka vägnätet i Vasa centrum, och vi kan lätt göra samma sak för ett annat område om vi bara ändrar variablerna <strong>address</strong> och <strong>distance</strong> i början, samt gränserna <strong>ylim()</strong> och <strong>xlim()</strong> i den sista kodcellen.</p>
